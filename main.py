@@ -11,4 +11,6 @@ object_key = 'data/mobile_price_classification/test-V-1.csv'
 s3_client.download_file(bucket_name, object_key, 'test-V-1.csv')
 print("File downloaded successfully.")
 import pandas as pd
-print(pd.read_csv("test-V-1.csv"))
+df=pd.read_csv("test-V-1.csv")
+print(df)
+print("df.shape", df.shape)
