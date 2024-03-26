@@ -15,3 +15,6 @@ import pandas as pd
 df=pd.read_csv("test-V-1.csv")
 print(df)
 print("df.shape", df.shape)
+print("df.dtypes", df.dtypes)
+print("END OF THE PROGRAM")
+
