@@ -15,6 +15,11 @@ import pandas as pd
 df=pd.read_csv("test-V-1.csv")
 print(df)
 print("df.shape", df.shape)
-print("df.dtypes", df.dtypes)
-print("END OF THE PROGRAM")
 
+print("now uploading the dataset to s3")
+df['newcol']="Akshay Sawant"
+df.to_csv("toupload.csv", index=False)
+s3_client.upload_file("toupload.csv", bucket_name, "uploaded_from_ec2.csv")
+print(df)
+print(df.shape)
+print("successfully uploaded to s3")
